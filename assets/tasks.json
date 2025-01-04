@@ -1,0 +1,163 @@
+[
+  {
+    "title": "Complete Math Assignment",
+    "description": "Solve problems from chapter 5 and submit on the portal.",
+    "date": "2024-12-15",
+    "time": "8:00 PM",
+    "status": "pending"
+  },
+  {
+    "title": "Group Project Meeting",
+    "description": "Discuss progress on the software engineering project.",
+    "date": "2024-12-16",
+    "time": "2:00 PM",
+    "status": "pending"
+  },
+  {
+    "title": "Study for Physics Exam",
+    "description": "Revise chapters 3 to 6 for the upcoming physics test.",
+    "date": "2024-12-17",
+    "time": "10:00 AM",
+    "status": "completed"
+  },
+  {
+    "title": "Submit Essay",
+    "description": "Upload the final draft of the history essay on the university portal.",
+    "date": "2024-12-18",
+    "time": "11:59 PM",
+    "status": "pending"
+  },
+  {
+    "title": "Library Visit",
+    "description": "Return borrowed books and check out new ones for research.",
+    "date": "2024-12-19",
+    "time": "3:00 PM",
+    "status": "completed"
+  },
+  {
+    "title": "Prepare Presentation",
+    "description": "Finalize slides for the environmental science seminar.",
+    "date": "2024-12-20",
+    "time": "1:00 PM",
+    "status": "pending"
+  },
+  {
+    "title": "Team Coding Session",
+    "description": "Collaborate with the team on the backend implementation of the project.",
+    "date": "2024-12-21",
+    "time": "5:00 PM",
+    "status": "pending"
+  },
+  {
+    "title": "Watch Recorded Lecture",
+    "description": "Review last week's recorded lecture on data structures.",
+    "date": "2024-12-14",
+    "time": "7:00 PM",
+    "status": "completed"
+  },
+  {
+    "title": "Finish Lab Report",
+    "description": "Write and submit the chemistry lab report.",
+    "date": "2024-12-13",
+    "time": "9:00 PM",
+    "status": "completed"
+  },
+  {
+    "title": "Book Doctor Appointment",
+    "description": "Schedule a checkup with the campus doctor.",
+    "date": "2024-12-15",
+    "time": "11:00 AM",
+    "status": "pending"
+  },
+  {
+    "title": "Organize Notes",
+    "description": "Sort notes for the semester and prepare for finals.",
+    "date": "2024-12-16",
+    "time": "4:00 PM",
+    "status": "pending"
+  },
+  {
+    "title": "Submit Scholarship Application",
+    "description": "Complete and upload the application for the student scholarship program.",
+    "date": "2024-12-14",
+    "time": "6:00 PM",
+    "status": "completed"
+  },
+  {
+    "title": "Gym Workout",
+    "description": "Attend the weekly gym workout session.",
+    "date": "2024-12-15",
+    "time": "6:30 PM",
+    "status": "pending"
+  },
+  {
+    "title": "Prepare Resume",
+    "description": "Update and format the resume for internship applications.",
+    "date": "2024-12-16",
+    "time": "3:00 PM",
+    "status": "new"
+  },
+  {
+    "title": "Plan Weekend Trip",
+    "description": "Organize the details for a weekend trip with friends.",
+    "date": "2024-12-17",
+    "time": "5:00 PM",
+    "status": "new"
+  },
+  {
+    "title": "Buy Stationery",
+    "description": "Purchase new notebooks and pens for the next semester.",
+    "date": "2024-12-18",
+    "time": "10:00 AM",
+    "status": "new"
+  },
+  {
+    "title": "Read Research Paper",
+    "description": "Go through the assigned research paper on machine learning trends.",
+    "date": "2024-12-19",
+    "time": "2:00 PM",
+    "status": "new"
+  },
+  {
+    "title": "Install New Software",
+    "description": "Set up the required software for the upcoming software development class.",
+    "date": "2024-12-20",
+    "time": "4:00 PM",
+    "status": "new"
+  },
+  {
+    "title": "Attend Webinar",
+    "description": "Join the webinar on cybersecurity best practices.",
+    "date": "2024-12-21",
+    "time": "11:00 AM",
+    "status": "new"
+  },
+  {
+    "title": "Practice Coding Problems",
+    "description": "Solve coding challenges on data structures and algorithms.",
+    "date": "2024-12-22",
+    "time": "3:00 PM",
+    "status": "new"
+  },
+  {
+    "title": "Update Social Media Profile",
+    "description": "Refresh the social media profiles with recent updates and achievements.",
+    "date": "2024-12-23",
+    "time": "1:00 PM",
+    "status": "new"
+  },
+  {
+    "title": "Research Internship Opportunities",
+    "description": "Explore and shortlist potential internship opportunities for the summer.",
+    "date": "2024-12-24",
+    "time": "10:00 AM",
+    "status": "new"
+  },
+  {
+    "title": "Prepare for Mock Interview",
+    "description": "Practice common interview questions and scenarios for the upcoming mock interview session.",
+    "date": "2024-12-25",
+    "time": "2:00 PM",
+    "status": "new"
+  }
+]
