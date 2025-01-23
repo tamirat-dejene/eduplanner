@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-AppBar buildAppBar(BuildContext context) {
+AppBar buildAppBar(BuildContext context, GlobalKey<ScaffoldState> scaffoldKey) {
   return AppBar(
     elevation: 0,
     title: const Text(
@@ -16,7 +16,7 @@ AppBar buildAppBar(BuildContext context) {
         return IconButton(
           icon: const Icon(Icons.menu),
           onPressed: () {
-            Scaffold.of(context).openDrawer();
+            scaffoldKey.currentState?.openDrawer();
           },
         );
       },
@@ -25,13 +25,13 @@ AppBar buildAppBar(BuildContext context) {
     actions: [
       GestureDetector(
         onTap: () {
-          Navigator.pushNamed(context, '/profile');
+          scaffoldKey.currentState?.openDrawer();
         },
         behavior: HitTestBehavior.translucent,
         child: const Padding(
           padding: EdgeInsets.only(right: 16.0),
           child: CircleAvatar(
-            backgroundImage: AssetImage('assets/icons/avatar.png'),
+            backgroundImage: AssetImage('assets/images/avatar.png'),
           ),
         ),
       ),

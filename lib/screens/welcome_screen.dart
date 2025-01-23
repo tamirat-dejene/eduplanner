@@ -1,6 +1,8 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
-import 'package:edu_planner/screens/dashboard_screen.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'dashboard_screen.dart';
+import 'login_screen.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -36,9 +38,28 @@ class SplashScreen extends StatelessWidget {
           ),
         ],
       ),
-      nextScreen: DashboardScreen(),
+      // Dynamically set the next screen based on user authentication status
+      nextScreen: FutureBuilder(
+        future: _checkUserStatus(),
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return const Center(child: CircularProgressIndicator());
+          } else if (snapshot.hasData && snapshot.data == true) {
+            // User is logged in, navigate to DashboardScreen
+            return const DashboardScreen();
+          } else {
+            // User is not logged in, navigate to LoginScreen
+            return const LoginScreen();
+          }
+        },
+      ),
       splashTransition: SplashTransition.fadeTransition,
       backgroundColor: const Color.fromARGB(255, 207, 199, 199),
     );
+  }
+
+  Future<bool> _checkUserStatus() async {
+    final user = FirebaseAuth.instance.currentUser;
+    return user != null;
   }
 }

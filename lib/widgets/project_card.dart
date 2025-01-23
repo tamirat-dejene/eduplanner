@@ -4,30 +4,29 @@ class ProjectCard extends StatelessWidget {
   final String projectName;
   final String description;
   final String date;
-  final ValueChanged<bool?>? onMarkDone;
+  final String? actionLabel;
+  final VoidCallback onRemoveProject;
+  final VoidCallback? onMoveProject;
 
   const ProjectCard({
-    Key? key,
+    super.key,
     required this.projectName,
     required this.description,
     required this.date,
-    this.onMarkDone,
-  }) : super(key: key);
+    required this.onRemoveProject,
+    this.actionLabel,
+    this.onMoveProject,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: Colors.green,
         borderRadius: BorderRadius.circular(16),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey.withOpacity(0.1),
-            spreadRadius: 2,
-            blurRadius: 5,
-          ),
-        ],
+        gradient: const LinearGradient(
+          colors: [Colors.green, Colors.lightGreen],
+        ),
       ),
       child: Row(
         children: [
@@ -62,24 +61,34 @@ class ProjectCard extends StatelessWidget {
               ],
             ),
           ),
-          if (onMarkDone != null)
-            Row(
-              children: [
-                const Text(
-                  'Mark Done',
-                  style: TextStyle(
-                    fontSize: 12,
-                    color: Colors.white,
-                  ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              IconButton(
+                icon: const Icon(Icons.delete_forever_outlined),
+                color: const Color.fromARGB(255, 236, 77, 77),
+                onPressed: onRemoveProject,
+              ),
+              if (onMoveProject != null && actionLabel != null)
+                Row(
+                  children: [
+                    Text(
+                      actionLabel!,
+                      style: const TextStyle(
+                        fontSize: 12,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    IconButton(
+                      icon: const Icon(Icons.check_box_outline_blank),
+                      color: Colors.white,
+                      onPressed: onMoveProject,
+                    ),
+                  ],
                 ),
-                Checkbox(
-                  value: false,
-                  onChanged: onMarkDone,
-                  checkColor: Colors.white,
-                  activeColor: Colors.blue,
-                ),
-              ],
-            ),
+            ],
+          ),
         ],
       ),
     );
